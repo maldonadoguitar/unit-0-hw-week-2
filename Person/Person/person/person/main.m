@@ -1,12 +1,10 @@
 //
 //  main.m
-//  Person
+//  person
 //
-//  Created by Michael Kavouras on 6/21/15.
-//  Copyright (c) 2015 Mike Kavouras. All rights reserved.
+//  Created by Christian Maldonado on 6/23/15.
+//  Copyright (c) 2015 Christian Maldonado. All rights reserved.
 //
-
-
 #import <Foundation/Foundation.h>
 
 @interface Person : NSObject
@@ -102,37 +100,37 @@ int main(int argc, const char * argv[]) {
         
         [james setCity:@"Brooklyn"];
         [christian setCity:@"South Orange"];
-        
-        BOOL citiesAreSame = [christian checkSameCity:james];
-        NSLog(@"%d", citiesAreSame);
-        
-        [james setPhoneNumber:@"617-894-5866"];
-        
-        NSString *jamesName = [james name];
-        
-        NSLog(@"%@\n", jamesName);
-        
-        [james setName:@"Jorge"];
-        
-        NSLog(@"%@",[james name]);
-        
-        NSLog(@"%@", [james city]);
-        
-        [james setCity:@"New York"];
-        NSLog(@"%@", [james city]);
-        
-        [christian changePersonsName:james toName:@"Philip"];
-        
-        NSLog(@"%@", [james name]);
-        
-        citiesAreSame = [christian checkSameCity:james];
-        NSLog(@"%d", citiesAreSame);
-        
-        Person *christiansBaby = [christian haveChild];
-        NSLog(@"%@",[christiansBaby city]);
-        [christian changePersonsName:christiansBaby toName:@"Abc"];
-        
-        // [changePersonsName setName:@""Indiana Jones"]  would be in implimentation
-    }
-    return 0;
-}
+         
+         BOOL citiesAreSame = [christian checkSameCity:james];
+         NSLog(@"%d", citiesAreSame);
+         
+         [james setPhoneNumber:@"617-894-5866"];
+         
+         NSString *jamesName = [james name];
+         
+         NSLog(@"%@\n", jamesName);
+         
+         [james setName:@"Jorge"];
+         
+         NSLog(@"%@",[james name]);
+         
+         NSLog(@"%@", [james city]);
+         
+         [james setCity:@"New York"];
+         NSLog(@"%@", [james city]);
+         
+         [christian changePersonsName:james toName:@"Philip"];
+         
+         NSLog(@"%@", [james name]);
+         
+         citiesAreSame = [christian checkSameCity:james];
+         NSLog(@"%d", citiesAreSame);
+         
+         Person *christiansBaby = [christian haveChild];
+         NSLog(@"%@",[christiansBaby city]);
+         [christian changePersonsName:christiansBaby toName:@"Abc"];
+         
+         // [changePersonsName setName:@""Indiana Jones"]  would be in implimentation
+         }
+         return 0;
+         }
