@@ -25,6 +25,7 @@
 
 -(BOOL) checkSameCity:(Person *)aPerson;
 -(Person *)haveChild;
+-(void) claimChild:(Person *)childToClaim;
 
 
 @end
@@ -33,6 +34,7 @@
     NSString *_city;
     NSString *_phoneNumber;
     NSString *_name;
+    Person *_child;
 }
 
 //return/name/parameter type/parameter name
@@ -84,6 +86,14 @@
     }
     
 }
+-(void) claimChild:(Person *)childToClaim{
+    if (_children == nil){
+        _children = [[NSMutableArray alloc] init];
+    }
+    [_children addObject:childToClaim];
+    _child = childToClaim;
+
+}
 
 
 @end
@@ -129,6 +139,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"%d", citiesAreSame);
         
         Person *christiansBaby = [christian haveChild];
+        [christian claimChild:christiansBaby];
         NSLog(@"%@",[christiansBaby city]);
         [christian changePersonsName:christiansBaby toName:@"Abc"];
         
